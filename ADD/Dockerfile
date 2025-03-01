@@ -6,6 +6,6 @@ RUN dnf install nginx -y
 RUN rm -rf /usr/share/nginx/html/index.html
 #TO add something from the internet.
 ADD https://raw.githubusercontent.com/RajavamshiA/dockerfiles/refs/heads/main/RUN/Dockerfile /usr/share/nginx/html/index.html
-RUN chmod +x /usr/share/nginx/html/index.html
+RUN chmod +r /usr/share/nginx/html/index.html
 #Systemd Can be accessed by full OS. As we are using a base minimum OS, it will not start the service by its own. Unlike systemctl, we start the service and run the service maually with CMD.
 CMD ["nginx", "-g", "daemon off;"]
