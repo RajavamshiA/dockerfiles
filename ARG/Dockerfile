@@ -5,5 +5,6 @@ ENV course="Devops" \
     trainer="Siva"
 #ARG same like ENV, key:value pair.
 ARG USERNAME=Vamshi
+ENV USERNAME=$USERNAME
 RUN echo "Hello User: ${USERNAME}, image version : ${version}" > /tmp/devops.txt
 CMD ["sleep", "100"]
